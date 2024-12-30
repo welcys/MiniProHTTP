@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/welch/Desktop/top/MiniPro-HTTP/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +172,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/minipro_lib.dir/rule:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/minipro_lib.dir/rule
+.PHONY : src/CMakeFiles/minipro_lib.dir/rule
+
+# Convenience name for target.
+minipro_lib: src/CMakeFiles/minipro_lib.dir/rule
+.PHONY : minipro_lib
+
+# fast build rule for target.
+minipro_lib/fast:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/build
+.PHONY : minipro_lib/fast
+
+# Convenience name for target.
 src/CMakeFiles/MiniProHTTP.dir/rule:
 	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/MiniProHTTP.dir/rule
 .PHONY : src/CMakeFiles/MiniProHTTP.dir/rule
@@ -129,6 +198,54 @@ MiniProHTTP: src/CMakeFiles/MiniProHTTP.dir/rule
 MiniProHTTP/fast:
 	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniProHTTP.dir/build.make src/CMakeFiles/MiniProHTTP.dir/build
 .PHONY : MiniProHTTP/fast
+
+config/Config.o: config/Config.cpp.o
+.PHONY : config/Config.o
+
+# target to build an object file
+config/Config.cpp.o:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/config/Config.cpp.o
+.PHONY : config/Config.cpp.o
+
+config/Config.i: config/Config.cpp.i
+.PHONY : config/Config.i
+
+# target to preprocess a source file
+config/Config.cpp.i:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/config/Config.cpp.i
+.PHONY : config/Config.cpp.i
+
+config/Config.s: config/Config.cpp.s
+.PHONY : config/Config.s
+
+# target to generate assembly for a file
+config/Config.cpp.s:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/config/Config.cpp.s
+.PHONY : config/Config.cpp.s
+
+logger/Logger.o: logger/Logger.cpp.o
+.PHONY : logger/Logger.o
+
+# target to build an object file
+logger/Logger.cpp.o:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/logger/Logger.cpp.o
+.PHONY : logger/Logger.cpp.o
+
+logger/Logger.i: logger/Logger.cpp.i
+.PHONY : logger/Logger.i
+
+# target to preprocess a source file
+logger/Logger.cpp.i:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/logger/Logger.cpp.i
+.PHONY : logger/Logger.cpp.i
+
+logger/Logger.s: logger/Logger.cpp.s
+.PHONY : logger/Logger.s
+
+# target to generate assembly for a file
+logger/Logger.cpp.s:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/logger/Logger.cpp.s
+.PHONY : logger/Logger.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -159,7 +276,7 @@ threadpool/threadpool.o: threadpool/threadpool.cpp.o
 
 # target to build an object file
 threadpool/threadpool.cpp.o:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniProHTTP.dir/build.make src/CMakeFiles/MiniProHTTP.dir/threadpool/threadpool.cpp.o
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/threadpool/threadpool.cpp.o
 .PHONY : threadpool/threadpool.cpp.o
 
 threadpool/threadpool.i: threadpool/threadpool.cpp.i
@@ -167,7 +284,7 @@ threadpool/threadpool.i: threadpool/threadpool.cpp.i
 
 # target to preprocess a source file
 threadpool/threadpool.cpp.i:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniProHTTP.dir/build.make src/CMakeFiles/MiniProHTTP.dir/threadpool/threadpool.cpp.i
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/threadpool/threadpool.cpp.i
 .PHONY : threadpool/threadpool.cpp.i
 
 threadpool/threadpool.s: threadpool/threadpool.cpp.s
@@ -175,7 +292,7 @@ threadpool/threadpool.s: threadpool/threadpool.cpp.s
 
 # target to generate assembly for a file
 threadpool/threadpool.cpp.s:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniProHTTP.dir/build.make src/CMakeFiles/MiniProHTTP.dir/threadpool/threadpool.cpp.s
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/threadpool/threadpool.cpp.s
 .PHONY : threadpool/threadpool.cpp.s
 
 # Help Target
@@ -185,8 +302,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... MiniProHTTP"
+	@echo "... minipro_lib"
+	@echo "... config/Config.o"
+	@echo "... config/Config.i"
+	@echo "... config/Config.s"
+	@echo "... logger/Logger.o"
+	@echo "... logger/Logger.i"
+	@echo "... logger/Logger.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

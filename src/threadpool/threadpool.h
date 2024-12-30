@@ -9,8 +9,8 @@
 
 class ThreadPool {
 public:
-  // 构造 & 析构
-  ThreadPool(size_t numThreads);
+
+  explicit ThreadPool(size_t numThreads);
   ~ThreadPool();
 
   // 禁用拷贝，防止线程池被拷贝
@@ -30,5 +30,5 @@ private:
 
   std::mutex queueMutex_; // 互斥锁,用于保护任务队列，防止多个线程同时访问任务队列
   std::condition_variable condVar_; // 条件变量,用于线程间的同步，当任务队列为空时，线程等待，当有任务时，唤醒线程
-  std::atomic<bool> stop_; // 用于在析构或其他地方通知线程停止，防止线程池被析构时，线程还在运行，即使任务队列中还有任务
+  std::atomic<bool> stop_; // 用于在析构或其他地方通知线程停止
 };

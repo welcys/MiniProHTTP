@@ -1,0 +1,30 @@
+Start testing: Dec 25 13:30 CST
+----------------------------------------------------------
+1/1 Testing: test_threadpool
+1/1 Test: test_threadpool
+Command: "/Users/welch/Desktop/top/MiniPro-HTTP/build/tests/test_threadpool"
+Directory: /Users/welch/Desktop/top/MiniPro-HTTP/build/tests
+"test_threadpool" start time: Dec 25 13:30 CST
+Output:
+----------------------------------------------------------
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from ThreadPoolTest
+[ RUN      ] ThreadPoolTest.BasicTaskExecution
+[       OK ] ThreadPoolTest.BasicTaskExecution (1002 ms)
+[ RUN      ] ThreadPoolTest.StopEarly
+[       OK ] ThreadPoolTest.StopEarly (313 ms)
+[----------] 2 tests from ThreadPoolTest (1315 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (1316 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   1.32 sec
+----------------------------------------------------------
+Test Passed.
+"test_threadpool" end time: Dec 25 13:30 CST
+"test_threadpool" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Dec 25 13:30 CST

@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/welch/Desktop/top/MiniPro-HTTP/build/src/cmake_install.cmake")
+  include("/Users/welch/Desktop/top/MiniPro-HTTP/build/tests/cmake_install.cmake")
 
 endif()
 

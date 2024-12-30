@@ -1,0 +1,10 @@
+{
+
+  "port": 8080,
+
+  "threadPoolSize": 5,
+
+  "logLevel": "DEBUG",
+
+  "docRoot": "./www"
+}

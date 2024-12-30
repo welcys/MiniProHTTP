@@ -39,10 +39,8 @@ void ThreadPool::workerThread() {
             }
             task = std::move(tasks_.front());
             tasks_.pop();
-        }   //出了这个大括号，lock 被析构，mutex 自动释放
+        }   //拿到任务lock 被析构，mutex 自动释放
         // 执行任务
         task();
     }
 }
-
-

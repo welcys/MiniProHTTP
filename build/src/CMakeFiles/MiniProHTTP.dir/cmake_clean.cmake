@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MiniProHTTP.dir/main.cpp.o"
   "CMakeFiles/MiniProHTTP.dir/main.cpp.o.d"
-  "CMakeFiles/MiniProHTTP.dir/threadpool/threadpool.cpp.o"
-  "CMakeFiles/MiniProHTTP.dir/threadpool/threadpool.cpp.o.d"
   "MiniProHTTP"
   "MiniProHTTP.pdb"
 )

@@ -1,0 +1,50 @@
+[2024-12-30 16:45:26][INFO ] Server is starting...
+[2024-12-30 16:45:26][INFO ] Port = 8080
+[2024-12-30 16:45:26][INFO ] ThreadPool Size = 4
+[2024-12-30 16:45:26][INFO ] DocRoot = ./www
+[2024-12-30 16:45:26][WARN ] This is a warning message
+[2024-12-30 16:45:26][ERROR] This is an error message
+[2024-12-30 16:55:21][INFO ] Server is starting...
+[2024-12-30 16:55:21][INFO ] Port = 8080
+[2024-12-30 16:55:21][INFO ] ThreadPool Size = 4
+[2024-12-30 16:55:21][INFO ] DocRoot = ./www
+[2024-12-30 16:55:21][WARN ] This is a warning message
+[2024-12-30 16:55:21][ERROR] This is an error message
+[2024-12-30 16:56:29][INFO ] Server is starting...
+[2024-12-30 16:56:29][INFO ] Port = 8080
+[2024-12-30 16:56:29][INFO ] ThreadPool Size = 4
+[2024-12-30 16:56:29][INFO ] DocRoot = ./www
+[2024-12-30 16:56:29][WARN ] This is a warning message
+[2024-12-30 16:56:29][ERROR] This is an error message
+[2024-12-30 16:56:56][INFO ] Server is starting...
+[2024-12-30 16:56:56][INFO ] Port = 8080
+[2024-12-30 16:56:56][INFO ] ThreadPool Size = 4
+[2024-12-30 16:56:56][INFO ] DocRoot = ./www
+[2024-12-30 16:56:56][WARN ] This is a warning message
+[2024-12-30 16:56:56][ERROR] This is an error message
+[2024-12-30 16:57:20][INFO ] Server is starting...
+[2024-12-30 16:57:20][INFO ] Port = 8080
+[2024-12-30 16:57:20][INFO ] ThreadPool Size = 4
+[2024-12-30 16:57:20][INFO ] DocRoot = ./www
+[2024-12-30 16:57:20][WARN ] This is a warning message
+[2024-12-30 16:57:20][ERROR] This is an error message
+[2024-12-30 16:58:20][INFO ] Server is starting...
+[2024-12-30 16:58:20][INFO ] Port = 8080
+[2024-12-30 16:58:20][INFO ] ThreadPool Size = 4
+[2024-12-30 16:58:20][INFO ] DocRoot = ./www
+[2024-12-30 16:58:20][WARN ] This is a warning message
+[2024-12-30 16:58:20][ERROR] This is an error message
+[2024-12-30 17:01:11][INFO ] Server is starting...
+[2024-12-30 17:01:11][INFO ] Port = 8080
+[2024-12-30 17:01:11][INFO ] ThreadPool Size = 4
+[2024-12-30 17:01:11][INFO ] DocRoot = ./www
+[2024-12-30 17:01:11][DEBUG] This is a debug message
+[2024-12-30 17:01:11][WARN ] This is a warning message
+[2024-12-30 17:01:11][ERROR] This is an error message
+[2024-12-30 17:01:29][INFO ] Server is starting...
+[2024-12-30 17:01:29][INFO ] Port = 8080
+[2024-12-30 17:01:29][INFO ] ThreadPool Size = 5
+[2024-12-30 17:01:29][INFO ] DocRoot = ./www
+[2024-12-30 17:01:29][DEBUG] This is a debug message
+[2024-12-30 17:01:29][WARN ] This is a warning message
+[2024-12-30 17:01:29][ERROR] This is an error message
