@@ -33,9 +33,7 @@ private:
     static LogLevel logLevel_;
     static bool console_;
     static std::mutex logMutex_;
-
     static void writeLog(LogLevel lv, const std::string &msg);
-
 
     Logger() = delete;
     ~Logger() = delete;
