@@ -1,0 +1,4 @@
+[2025-01-06 14:39:37][INFO ] This is an info log.
+[2025-01-06 14:39:37][DEBUG] This debug might not show if level is WARN.
+[2025-01-06 14:39:37][WARN ] Warning log. Should appear if level >= WARN.
+[2025-01-06 14:39:37][ERROR] Error log. Always shown if level >= ERROR.

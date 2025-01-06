@@ -16,7 +16,7 @@ enum class LogLevel {
 
 class Logger {
 public:
-    // [Pitfall] 全是静态方法 + 静态成员 => 只能有一份全局 Logger
+
     static void init(const std::string &filename, LogLevel level, bool consoleOutput);
 
     static void setLevel(LogLevel level);
@@ -28,7 +28,7 @@ public:
     static void error(const std::string &msg);
 
 private:
-    // [Pitfall] 全局静态，无法支持多通道日志
+
     static std::ofstream logFile_;
     static LogLevel logLevel_;
     static bool console_;
@@ -36,7 +36,9 @@ private:
 
     static void writeLog(LogLevel lv, const std::string &msg);
 
-    // [Pitfall] init也没有做多线程安全保证
+
     Logger() = delete;
     ~Logger() = delete;
 };
+
+LogLevel parseLogLevel(const std::string &str);

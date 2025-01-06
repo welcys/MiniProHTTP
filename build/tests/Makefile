@@ -185,29 +185,43 @@ test_threadpool/fast:
 	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/build
 .PHONY : test_threadpool/fast
 
-__/src/threadpool/threadpool.o: __/src/threadpool/threadpool.cpp.o
-.PHONY : __/src/threadpool/threadpool.o
+# Convenience name for target.
+tests/CMakeFiles/test_log.dir/rule:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_log.dir/rule
+.PHONY : tests/CMakeFiles/test_log.dir/rule
+
+# Convenience name for target.
+test_log: tests/CMakeFiles/test_log.dir/rule
+.PHONY : test_log
+
+# fast build rule for target.
+test_log/fast:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/build
+.PHONY : test_log/fast
+
+test_log.o: test_log.cpp.o
+.PHONY : test_log.o
 
 # target to build an object file
-__/src/threadpool/threadpool.cpp.o:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/__/src/threadpool/threadpool.cpp.o
-.PHONY : __/src/threadpool/threadpool.cpp.o
+test_log.cpp.o:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/test_log.cpp.o
+.PHONY : test_log.cpp.o
 
-__/src/threadpool/threadpool.i: __/src/threadpool/threadpool.cpp.i
-.PHONY : __/src/threadpool/threadpool.i
+test_log.i: test_log.cpp.i
+.PHONY : test_log.i
 
 # target to preprocess a source file
-__/src/threadpool/threadpool.cpp.i:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/__/src/threadpool/threadpool.cpp.i
-.PHONY : __/src/threadpool/threadpool.cpp.i
+test_log.cpp.i:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/test_log.cpp.i
+.PHONY : test_log.cpp.i
 
-__/src/threadpool/threadpool.s: __/src/threadpool/threadpool.cpp.s
-.PHONY : __/src/threadpool/threadpool.s
+test_log.s: test_log.cpp.s
+.PHONY : test_log.s
 
 # target to generate assembly for a file
-__/src/threadpool/threadpool.cpp.s:
-	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/__/src/threadpool/threadpool.cpp.s
-.PHONY : __/src/threadpool/threadpool.cpp.s
+test_log.cpp.s:
+	cd /Users/welch/Desktop/top/MiniPro-HTTP/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/test_log.cpp.s
+.PHONY : test_log.cpp.s
 
 test_threadpool.o: test_threadpool.cpp.o
 .PHONY : test_threadpool.o
@@ -246,10 +260,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_log"
 	@echo "... test_threadpool"
-	@echo "... __/src/threadpool/threadpool.o"
-	@echo "... __/src/threadpool/threadpool.i"
-	@echo "... __/src/threadpool/threadpool.s"
+	@echo "... test_log.o"
+	@echo "... test_log.i"
+	@echo "... test_log.s"
 	@echo "... test_threadpool.o"
 	@echo "... test_threadpool.i"
 	@echo "... test_threadpool.s"

@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_threadpool.dir/__/src/threadpool/threadpool.cpp.o"
-  "CMakeFiles/test_threadpool.dir/__/src/threadpool/threadpool.cpp.o.d"
   "CMakeFiles/test_threadpool.dir/test_threadpool.cpp.o"
   "CMakeFiles/test_threadpool.dir/test_threadpool.cpp.o.d"
   "test_threadpool"

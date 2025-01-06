@@ -94,8 +94,9 @@ all: cmake_check_build_system
 
 # The main codegen target
 codegen: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/json-subbuild/CMakeFiles /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/json-subbuild//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Finished generating code"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/json-subbuild/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target

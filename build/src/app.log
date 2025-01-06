@@ -1,0 +1,5 @@
+[2025-01-06 14:06:02][INFO ] Loaded config: port=8080, threadPoolSize=5, logLevel=DEBUG, docRoot=./www
+[2025-01-06 14:23:25][INFO ] This is an info log.
+[2025-01-06 14:23:25][DEBUG] This debug might not show if level is WARN.
+[2025-01-06 14:23:25][WARN ] Warning log. Should appear if level >= WARN.
+[2025-01-06 14:23:25][ERROR] Error log. Always shown if level >= ERROR.

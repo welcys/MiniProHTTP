@@ -22,6 +22,7 @@
 /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/json-build/CMakeFiles/install/local.dir
 /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/json-build/CMakeFiles/install/strip.dir
 /Users/welch/Desktop/top/MiniPro-HTTP/build/tests/CMakeFiles/test_threadpool.dir
+/Users/welch/Desktop/top/MiniPro-HTTP/build/tests/CMakeFiles/test_log.dir
 /Users/welch/Desktop/top/MiniPro-HTTP/build/tests/CMakeFiles/test.dir
 /Users/welch/Desktop/top/MiniPro-HTTP/build/tests/CMakeFiles/edit_cache.dir
 /Users/welch/Desktop/top/MiniPro-HTTP/build/tests/CMakeFiles/rebuild_cache.dir

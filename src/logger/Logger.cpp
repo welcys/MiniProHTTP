@@ -3,13 +3,11 @@
 #include <chrono>
 #include <ctime>
 
-// [Pitfall] 静态成员
 std::ofstream Logger::logFile_;
 LogLevel Logger::logLevel_ = LogLevel::DEBUG;
 bool Logger::console_ = true;
 std::mutex Logger::logMutex_;
 
-// [Pitfall] localtime 非线程安全
 static std::string getCurrentTimeString() {
     auto now = std::chrono::system_clock::now();
     std::time_t t = std::chrono::system_clock::to_time_t(now);
@@ -19,10 +17,9 @@ static std::string getCurrentTimeString() {
 }
 
 void Logger::init(const std::string &filename, LogLevel level, bool consoleOutput) {
-    // [Pitfall] 没加锁，如果多个线程同时 init => 竞态
     logFile_.open(filename, std::ios::app);
     if(!logFile_.is_open()) {
-        std::cerr << "[Pitfall] Logger failed to open file: " << filename << std::endl;
+        std::cerr << " Logger failed to open file: " << filename << std::endl;
     }
     logLevel_ = level;
     console_ = consoleOutput;
@@ -39,9 +36,9 @@ LogLevel Logger::getLevel() {
 }
 
 void Logger::writeLog(LogLevel lv, const std::string &msg) {
-    // [Pitfall] 每次写都上锁 & flush => 性能损耗
+
     std::lock_guard<std::mutex> lock(Logger::logMutex_);
-    if(lv < Logger::logLevel_) {
+    if(lv < Logger::logLevel_) {  //如果日志级别低于设置的级别，则不输出
         return;
     }
 
@@ -58,7 +55,7 @@ void Logger::writeLog(LogLevel lv, const std::string &msg) {
     // 写文件
     if(Logger::logFile_.is_open()) {
         Logger::logFile_ << logLine;
-        Logger::logFile_.flush(); // [Pitfall] flush每次都调
+        Logger::logFile_.flush(); 
     }
 
     // 同时输出到控制台
@@ -82,4 +79,13 @@ void Logger::warn(const std::string &msg) {
 }
 void Logger::error(const std::string &msg) {
     writeLog(LogLevel::ERROR, msg);
+}
+
+LogLevel parseLogLevel(const std::string& levelStr) {
+    if (levelStr == "DEBUG") return LogLevel::DEBUG;
+    else if (levelStr == "INFO") return LogLevel::INFO;
+    else if (levelStr == "WARN") return LogLevel::WARN;
+    else if (levelStr == "ERROR") return LogLevel::ERROR;
+    // 可以加一个默认
+    return LogLevel::INFO;
 }

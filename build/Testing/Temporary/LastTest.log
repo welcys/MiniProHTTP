@@ -1,30 +1,66 @@
-Start testing: Dec 25 13:30 CST
+Start testing: Jan 06 14:39 CST
 ----------------------------------------------------------
-1/1 Testing: test_threadpool
-1/1 Test: test_threadpool
+1/2 Testing: test_threadpool
+1/2 Test: test_threadpool
 Command: "/Users/welch/Desktop/top/MiniPro-HTTP/build/tests/test_threadpool"
 Directory: /Users/welch/Desktop/top/MiniPro-HTTP/build/tests
-"test_threadpool" start time: Dec 25 13:30 CST
+"test_threadpool" start time: Jan 06 14:39 CST
 Output:
 ----------------------------------------------------------
 [==========] Running 2 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 2 tests from ThreadPoolTest
 [ RUN      ] ThreadPoolTest.BasicTaskExecution
-[       OK ] ThreadPoolTest.BasicTaskExecution (1002 ms)
+[       OK ] ThreadPoolTest.BasicTaskExecution (1005 ms)
 [ RUN      ] ThreadPoolTest.StopEarly
-[       OK ] ThreadPoolTest.StopEarly (313 ms)
+[       OK ] ThreadPoolTest.StopEarly (310 ms)
 [----------] 2 tests from ThreadPoolTest (1315 ms total)
 
 [----------] Global test environment tear-down
-[==========] 2 tests from 1 test suite ran. (1316 ms total)
+[==========] 2 tests from 1 test suite ran. (1315 ms total)
 [  PASSED  ] 2 tests.
 <end of output>
-Test time =   1.32 sec
+Test time =   1.75 sec
 ----------------------------------------------------------
 Test Passed.
-"test_threadpool" end time: Dec 25 13:30 CST
+"test_threadpool" end time: Jan 06 14:39 CST
 "test_threadpool" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: Dec 25 13:30 CST
+2/2 Testing: test_log
+2/2 Test: test_log
+Command: "/Users/welch/Desktop/top/MiniPro-HTTP/build/tests/test_log"
+Directory: /Users/welch/Desktop/top/MiniPro-HTTP/build/tests
+"test_log" start time: Jan 06 14:39 CST
+Output:
+----------------------------------------------------------
+Running main() from /Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from LoggerTest
+[ RUN      ] LoggerTest.BasicLog
+[2025-01-06 14:39:37][INFO ] This is an info log.
+[2025-01-06 14:39:37][DEBUG] This debug might not show if level is WARN.
+[2025-01-06 14:39:37][WARN ] Warning log. Should appear if level >= WARN.
+[2025-01-06 14:39:37][ERROR] Error log. Always shown if level >= ERROR.
+[       OK ] LoggerTest.BasicLog (0 ms)
+[ RUN      ] LoggerTest.ConfigLog
+Cannot open config file: config.json
+[2025-01-06 14:39:37][INFO ] This is an info log.
+[2025-01-06 14:39:37][WARN ] Warning log. Should appear if level >= WARN.
+[2025-01-06 14:39:37][ERROR] Error log. Always shown if level >= ERROR.
+[       OK ] LoggerTest.ConfigLog (0 ms)
+[----------] 2 tests from LoggerTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.41 sec
+----------------------------------------------------------
+Test Passed.
+"test_log" end time: Jan 06 14:39 CST
+"test_log" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 06 14:39 CST

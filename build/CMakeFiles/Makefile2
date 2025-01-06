@@ -197,11 +197,13 @@ src/clean: _deps/json-build/clean
 
 # Recursive "all" directory target.
 tests/all: tests/CMakeFiles/test_threadpool.dir/all
+tests/all: tests/CMakeFiles/test_log.dir/all
 tests/all: _deps/googletest-build/all
 .PHONY : tests/all
 
 # Recursive "codegen" directory target.
 tests/codegen: tests/CMakeFiles/test_threadpool.dir/codegen
+tests/codegen: tests/CMakeFiles/test_log.dir/codegen
 tests/codegen: _deps/googletest-build/codegen
 .PHONY : tests/codegen
 
@@ -211,6 +213,7 @@ tests/preinstall: _deps/googletest-build/preinstall
 
 # Recursive "clean" directory target.
 tests/clean: tests/CMakeFiles/test_threadpool.dir/clean
+tests/clean: tests/CMakeFiles/test_log.dir/clean
 tests/clean: _deps/googletest-build/clean
 .PHONY : tests/clean
 
@@ -238,6 +241,7 @@ minipro_lib: src/CMakeFiles/minipro_lib.dir/rule
 # codegen rule for target.
 src/CMakeFiles/minipro_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/minipro_lib.dir/build.make src/CMakeFiles/minipro_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=11,12,13,14 "Finished codegen for target minipro_lib"
 .PHONY : src/CMakeFiles/minipro_lib.dir/codegen
 
 # clean rule for target.
@@ -269,6 +273,7 @@ MiniProHTTP: src/CMakeFiles/MiniProHTTP.dir/rule
 # codegen rule for target.
 src/CMakeFiles/MiniProHTTP.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MiniProHTTP.dir/build.make src/CMakeFiles/MiniProHTTP.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=1,2 "Finished codegen for target MiniProHTTP"
 .PHONY : src/CMakeFiles/MiniProHTTP.dir/codegen
 
 # clean rule for target.
@@ -280,16 +285,17 @@ src/CMakeFiles/MiniProHTTP.dir/clean:
 # Target rules for target tests/CMakeFiles/test_threadpool.dir
 
 # All Build rule for target.
+tests/CMakeFiles/test_threadpool.dir/all: src/CMakeFiles/minipro_lib.dir/all
 tests/CMakeFiles/test_threadpool.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/test_threadpool.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=15,16,17 "Built target test_threadpool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=17,18 "Built target test_threadpool"
 .PHONY : tests/CMakeFiles/test_threadpool.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test_threadpool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_threadpool.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test_threadpool.dir/rule
@@ -301,12 +307,47 @@ test_threadpool: tests/CMakeFiles/test_threadpool.dir/rule
 # codegen rule for target.
 tests/CMakeFiles/test_threadpool.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=17,18 "Finished codegen for target test_threadpool"
 .PHONY : tests/CMakeFiles/test_threadpool.dir/codegen
 
 # clean rule for target.
 tests/CMakeFiles/test_threadpool.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_threadpool.dir/build.make tests/CMakeFiles/test_threadpool.dir/clean
 .PHONY : tests/CMakeFiles/test_threadpool.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_log.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_log.dir/all: src/CMakeFiles/minipro_lib.dir/all
+tests/CMakeFiles/test_log.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+tests/CMakeFiles/test_log.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=15,16 "Built target test_log"
+.PHONY : tests/CMakeFiles/test_log.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_log.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_log.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_log.dir/rule
+
+# Convenience name for target.
+test_log: tests/CMakeFiles/test_log.dir/rule
+.PHONY : test_log
+
+# codegen rule for target.
+tests/CMakeFiles/test_log.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=15,16 "Finished codegen for target test_log"
+.PHONY : tests/CMakeFiles/test_log.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/test_log.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/clean
+.PHONY : tests/CMakeFiles/test_log.dir/clean
 
 #=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
@@ -332,6 +373,7 @@ gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=3,4 "Finished codegen for target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -364,6 +406,7 @@ gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=5,6 "Finished codegen for target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -395,6 +438,7 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=7,8 "Finished codegen for target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -426,6 +470,7 @@ gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/CMakeFiles --progress-num=9,10 "Finished codegen for target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.

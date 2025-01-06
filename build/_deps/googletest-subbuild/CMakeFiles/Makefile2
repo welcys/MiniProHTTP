@@ -102,6 +102,7 @@ googletest-populate: CMakeFiles/googletest-populate.dir/rule
 # codegen rule for target.
 CMakeFiles/googletest-populate.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/googletest-populate.dir/build.make CMakeFiles/googletest-populate.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/welch/Desktop/top/MiniPro-HTTP/build/_deps/googletest-subbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Finished codegen for target googletest-populate"
 .PHONY : CMakeFiles/googletest-populate.dir/codegen
 
 # clean rule for target.

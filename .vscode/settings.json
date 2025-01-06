@@ -63,6 +63,10 @@
         "map": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "csignal": "cpp",
+        "regex": "cpp",
+        "span": "cpp",
+        "valarray": "cpp"
     }
 }

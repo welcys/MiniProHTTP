@@ -211,6 +211,19 @@ test_threadpool/fast:
 .PHONY : test_threadpool/fast
 
 #=============================================================================
+# Target rules for targets named test_log
+
+# Build rule for target.
+test_log: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_log
+.PHONY : test_log
+
+# fast build rule for target.
+test_log/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_log.dir/build.make tests/CMakeFiles/test_log.dir/build
+.PHONY : test_log/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -281,6 +294,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... minipro_lib"
+	@echo "... test_log"
 	@echo "... test_threadpool"
 .PHONY : help
 

@@ -1,2 +1,3 @@
-test_threadpool 7 0.188912
+test_threadpool 8 0.218194
+test_log 1 0.411653
 ---
